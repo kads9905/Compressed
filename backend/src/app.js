@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+import { errorHandler } from "./middleware/error.middleware.js";
 
 const app = express();
 
@@ -12,5 +13,10 @@ app.use(express.json());
 import healthRouter from "./routes/health.routes.js";
 
 app.use("/api/health", healthRouter);
+
+
+// global error middleware
+app.use(errorHandler);
+
 
 export default app;
