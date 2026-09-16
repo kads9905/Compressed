@@ -14,6 +14,10 @@ import healthRouter from "./routes/health.routes.js";
 
 app.use("/api/health", healthRouter);
 
+import uploadRouter from "./routes/upload.routes.js";
+
+app.use("/api/files", uploadRouter);
+
 
 // global error middleware
 app.use(errorHandler);
