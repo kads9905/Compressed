@@ -22,6 +22,10 @@ import compressionRouter from "./routes/compression.routes.js";
 
 app.use("/api/compress", compressionRouter);
 
+import fileRouter from "./routes/file.routes.js";
+
+app.use("/api/files", fileRouter);
+
 
 // global error middleware
 app.use(errorHandler);

@@ -34,6 +34,7 @@ const compressImageController = asyncHandler(async (req, res) => {
       {
         fileId,
         outputName: result.outputName,
+        downloadUrl: `/api/files/download/${result.outputName}`,
         originalSize,
         compressedSize,
         savedPercentage,
