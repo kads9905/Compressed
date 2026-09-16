@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import { errorHandler } from "./middleware/error.middleware.js";
+import { errorHandler } from "./middlewares/error.middleware.js";
 
 const app = express();
 
@@ -17,6 +17,10 @@ app.use("/api/health", healthRouter);
 import uploadRouter from "./routes/upload.routes.js";
 
 app.use("/api/files", uploadRouter);
+
+import compressionRouter from "./routes/compression.routes.js";
+
+app.use("/api/compress", compressionRouter);
 
 
 // global error middleware
